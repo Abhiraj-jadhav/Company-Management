@@ -1,0 +1,68 @@
+@model DempApp2.Model.Dept
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5; 
+            margin: 10px;
+            padding: 10px;
+        }
+
+        h1 {
+            color: #333;
+            text-decoration: underline;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #0074d9; 
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056a6; 
+        }
+    </style>
+</head>
+<body>
+    <h1>UPDATE SALARY EMPLOYEE</h1>
+    <form method="post">
+        <label for="Id">Department Id</label>
+        @Html.TextBoxFor(entry => entry.Id)
+
+        <label for="dloc">Department Location</label>
+        @Html.TextBoxFor(entry => entry.dloc)
+
+        <input type="submit" value="Update"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@model IEnumerable<DempApp2.Model.DeptInfo>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DempoApp2</title>
+    <style>
+        body {
+            background-image: url(https://as2.ftcdn.net/v2/jpg/04/75/01/53/1000_F_475015340_bZtdNhS6XwxIbw85d3TVdRlNFrrP1Hp9.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5; /* Light gray background */
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        h1 {
+            color: #333;
+            text-decoration: underline;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0074d9; /* Blue header background */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternate row background */
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0074d9; /* Blue link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome Department</h1>
+
+    <table border="2">
+        <tr>
+            <th>Department ID</th>
+            <th>Department Name</th>
+            <th>Department Location</th>
+        </tr>
+        @foreach (var entry in Model)
+        {
+            <tr>
+                <td>@entry.DEPTID</td>
+                <td>@entry.Dname</td>
+                <td>@entry.Dloc</td>
+            </tr>
+        }
+    </table>
+
+    <p>
+        <a href="/Home/DRegister">Register Department</a>
+    </p>
+    
+    <p>
+        <a href="/Home/Dupdate">Update Department Location</a>
+    </p>
+</body>
+</html>

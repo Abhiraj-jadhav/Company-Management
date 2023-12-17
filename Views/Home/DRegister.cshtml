@@ -1,0 +1,80 @@
+@model DempApp2.Model.Dept
+<html>
+    <head>
+        <title>DemoApp</title>
+        <style>
+            body {
+            background-image: url(https://as2.ftcdn.net/v2/jpg/04/75/01/53/1000_F_475015340_bZtdNhS6XwxIbw85d3TVdRlNFrrP1Hp9.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+                font-family: Arial, sans-serif;
+                background-color: #ececec;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                text-align: center;
+                background-color: #aca0a0;
+                color: #fff;
+                padding: 20px;
+            }
+
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(179, 164, 164, 0.1), 0.1);
+            }
+
+            b {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            input[type="submit"] {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #555;
+            }
+
+            i {
+                color: #f00;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>WELCOME TO DEPARTMENT</h1>
+        <form method="post">
+             <b>Department ID:</b>
+            @Html.TextBoxFor(entry => entry.Id)
+            <b>Departmnet Name:</b>
+            @Html.TextBoxFor(entry => entry.dname)
+            <b>Department Location:</b>
+            @Html.TextBoxFor(entry => entry.dloc)
+
+            <input type="submit" value="Register"/>
+        </form>
+
+    </body>
+
+</html>

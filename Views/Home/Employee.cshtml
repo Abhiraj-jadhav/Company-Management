@@ -1,0 +1,100 @@
+@model IEnumerable<DempApp2.Model.EmpInfo>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DempoApp2</title>
+    <style>
+        body {
+             background-image: url(https://as2.ftcdn.net/v2/jpg/04/75/01/53/1000_F_475015340_bZtdNhS6XwxIbw85d3TVdRlNFrrP1Hp9.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            overflow: hidden;
+            height: 100vh;
+            text-align: center;
+            background-color: rgba(255, 247, 247, 0.8); 
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            text-decoration: underline;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0074d9; /* Blue header background */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Alternate row background */
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0074d9; /* Blue link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Dashing Employees</h1>
+
+    <table border="2">
+        <tr>
+            <th>Employee No</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+            <th>Employee DeptNo</th>
+        </tr>
+        @foreach (var entry in Model)
+        {
+            <tr>
+                <td>@entry.EmpNo</td>
+                <td>@entry.EmpName</td>
+                <td>@entry.Empsal</td>
+                <td>@entry.Empdept</td>
+            </tr>
+        }
+    </table>
+
+    <p>
+        <a href="/Home/Register">Register your Dashing Employee</a>
+    </p>
+
+    <p>
+        <a href="/Home/asd">Delete your Employee</a>
+    </p>
+
+    <p>
+        <a href="/Home/Salchange">Update Salary of your Employee</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/DempApp2.props" />
+</Project>
